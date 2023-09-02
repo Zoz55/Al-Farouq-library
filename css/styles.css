@@ -1,0 +1,168 @@
+
+/** --------------------- search icon --------------------**/
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+  
+.input {
+  border-style: none;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  outline: none;
+  border-radius: 50%;
+  transition: .5s ease-in-out;
+  background-color: #212529;
+  box-shadow: 0px 0px 3px #212529;
+  padding-right: 40px;
+  color: #8f8f8f;
+}
+
+
+
+.input::placeholder {
+  color: #8f8f8f;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border-style: none;
+  border-radius: 50%;
+  pointer-events: painted;
+  background-color: transparent;
+  transition: .2s linear;
+}
+
+.icon:focus ~ .input,
+.input:focus {
+  
+  box-shadow: none;
+  width: 250px;
+  border-radius: 1rem;
+  background-color: transparent;
+  border: 1.5px solid #1a73e8;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  color: #8f8f8f;
+}
+
+
+
+.card{
+
+  border: 0;
+  border-radius: 40px;
+  background-color: white ;
+}
+
+.collections-section .card{
+background-color: #919599;
+}
+
+.both-sides{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease-in-out;
+  border-radius: 40px;
+  
+}
+
+.single-book{
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+  border-radius: 40px 40px;
+
+}
+
+.books-collection{
+  width: 100%;
+  height: 500px;
+  opacity: 0;
+  border-radius: 40px 40px;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+  background-color: #414549;
+  box-shadow: 15px 15px 30px #717579,
+  -15px -15px 30px #212529;
+}
+
+.book{
+  height: 400px;
+}
+
+.both-sides:hover > .books-collection {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.both-sides:hover > .single-book {
+  opacity: 0.25;
+  -webkit-filter: blur(4px);
+}
+
+
+
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.both-sides:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+.newsteller{
+  position: relative;
+  height: fit-content;
+}
+.background-img{
+  background-image: url(../img/newsteller.jpg);
+  -webkit-filter: blur(3px);
+
+  height: 25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.newsteller-text{
+  background-color: rgb(0,0,0); 
+  background-color: rgba(256,256,256, 0.5); 
+  font-weight: bold;
+  border: 3px solid #919599;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  
+}
